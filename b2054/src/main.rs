@@ -1,9 +1,9 @@
-
 fn main() {
-    let mut input=Input::new();
-    let n = input.read::<u32>();
-    println!("{}",(1..=n).sum::<u32>());
+    let mut input = Input::new();
+    let n = input.read::<i32>();
+    println!("{:.2}",(1..=n).fold(0f32,|status,_|{status+input.read::<f32>()})/(n as f32));
 }
+
 struct Input<'a>{
     lines: std::io::Lines<std::io::StdinLock<'a>>,
     s:Vec<String>,
