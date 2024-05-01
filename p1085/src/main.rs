@@ -1,8 +1,9 @@
 fn main() {
-    Input line = Input::new();
-    let mut ans=0,ind;
+    let mut line = Input::new();
+    let mut ans=0;
+    let mut ind=0;
     for i in 0..7{
-        let (a,b)=(read<int>(),read<int>());
+        let (a,b)=(line.read::<i32>(),line.read::<i32>());
         if a+b>ans{
             ans = a+b;
             ind = i;
